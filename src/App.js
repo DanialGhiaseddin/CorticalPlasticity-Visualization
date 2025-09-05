@@ -196,32 +196,119 @@ export default function App() {
         {/* Figures */}
         <section id="figures" className="section">
           <h2>Figures</h2>
+
           <div className="card">
-            <h3>Figure S1. Schematic of Control Energy Analysis</h3>
-            <div className="figure-placeholder">
-              <p>Drop static PNG/SVG panels here. Use SVG for sharp posters.</p>
-            </div>
+            <h3>Figure S1. </h3>
+            <img src="/CorticalPlasticity-Visualization/assets/1.png" alt="UTA" />
+          </div>
+
+          <div className="card">
+            <h3>Figure S2. </h3>
+            <img src="/CorticalPlasticity-Visualization/assets/2.png" alt="Figure S2" />
+          </div>
+
+          <div className="card">
+            <h3>Figure S3. </h3>
+            <img src="/CorticalPlasticity-Visualization/assets/3.png" alt="Figure S3" />
+          </div>
+
+          <div className="card">
+            <h3>Figure S4. </h3>
+            <img src="/CorticalPlasticity-Visualization/assets/4.png" alt="Figure S4" />
+          </div>
+
+          <div className="card">
+            <h3>Figure S5. </h3>
+            <img src="/CorticalPlasticity-Visualization/assets/5.png" alt="Figure S5" />
+          </div>
+
+          <div className="card">
+            <h3>Figure S6. </h3>
+            <img src="/CorticalPlasticity-Visualization/assets/6.png" alt="Figure S6" />
           </div>
         </section>
 
         <div className="hr" />
 
         {/* Methods */}
-        <section id="methods" className="section">
-          <h2>Extended Methods</h2>
-          <div className="card">
-            <p>
-              Provide mathematical definitions, preprocessing steps, and parameter settings
-              (e.g., tractography details, normalization, null models, optimization tolerances).
-            </p>
-            <ul>
-              <li>Edge weighting & normalization strategy</li>
-              <li>Density range aggregation (AUC)</li>
-              <li>Null models for significance testing</li>
-              <li>Control model parameters (A, B, Q, R, horizon)</li>
-            </ul>
-          </div>
-        </section>
+<section id="methods" className="section">
+  <h2>Extended Methods</h2>
+
+  <div className="card">
+    <p>
+      In this study, a total of 12 domestic cats (6 hearing, 6 perinatally deafened) 
+      were used. Imaging data were collected using a 7 Tesla MRI scanner, including 
+      diffusion-weighted imaging (DWI) for white matter tract reconstruction and 
+      T1-weighted MP2RAGE scans for anatomical reference.
+    </p>
+  </div>
+
+  <div className="card" style={{ backgroundColor: "rgba(255,165,0,0.3)" }}>
+    <h3>Step 1: Connectome Extraction</h3>
+    <ul>
+      <li>
+        <strong>Preprocessing:</strong> Brain extraction, distortion correction, and 
+        alignment to the Catlas feline gray matter atlas (Stolzberg et al., 2017) 
+        were performed using FSL (v6.0.1). This included automated brain extraction (BET), 
+        distortion correction (TOPUP and EDDY), and manual masking for QC. Templates 
+        were aligned to subject diffusion space using ANTs (Sacco et al., 2024).
+      </li>
+      <li>
+        <strong>Connectome Extraction:</strong> Connectomes were generated using probabilistic 
+        tractography (probtrackx2) in FSL, connecting 160 predefined ROIs from the Catlas. 
+        Streamline counts were computed bidirectionally and summed into a symmetric 
+        160×160 matrix.
+      </li>
+    </ul>
+  </div>
+
+  <div className="card" style={{ backgroundColor: "rgba(255,165,0,0.4)" }}>
+    <h3>Step 2: Modeling the Brain as a Dynamical System</h3>
+    <p>
+      The brain dynamics were modeled with a linear time-invariant system:
+    </p>
+    <pre>
+      d𝑥(t)/dt = A·x(t) + B·u(t)
+    </pre>
+    <ul>
+      <li><strong>x(t)</strong>: State vector of neural activity across N regions</li>
+      <li><strong>A</strong>: Structural connectivity matrix (from DWI)</li>
+      <li><strong>B</strong>: Control input matrix (defines controllable regions)</li>
+      <li><strong>u(t)</strong>: Vector of external control inputs</li>
+    </ul>
+  </div>
+
+  <div className="card" style={{ backgroundColor: "rgba(255,165,0,0.5)" }}>
+    <h3>Step 3: Calculating Minimum Control Energy</h3>
+    <ul>
+      <li>
+        The controllability Gramian is defined as:
+        <pre>W = ∫₀ᵀ e^(At) B Bᵀ e^(Aᵀt) dt</pre>
+      </li>
+      <li>
+        The minimum control energy required for a transition is:
+        <pre>E = (x_T − x_0)ᵀ W⁻¹ (x_T − x_0)</pre>
+      </li>
+    </ul>
+  </div>
+
+  <div className="card" style={{ backgroundColor: "rgba(255,165,0,0.6)" }}>
+    <h3>Step 4: Statistical Analysis</h3>
+    <ul>
+      <li>
+        Energy values were compared between hearing and deaf groups using 
+        independent two-sample <em>t</em>-tests.
+      </li>
+      <li>
+        Statistical significance was set at <em>p &lt; 0.05</em>.
+      </li>
+      <li>
+        Percentage change in mean energy between groups was also computed 
+        to quantify relative differences.
+      </li>
+    </ul>
+  </div>
+</section>
 
         <div className="hr" />
 
@@ -259,7 +346,7 @@ export default function App() {
           <div className="card">
             <p>Questions or requests for data/code access:</p>
             <ul>
-              <li>Email: <a href="mailto:absar.forough@gmail.com">absar.forough@gmail.com</a></li>
+              <li>Email: <a href="mailto:danial.ghiaseddin@mail.mcgill.ca">danial.ghiaseddin@mail.mcgill.ca</a></li>
               <li>GitHub: <a href="https://github.com/DanialGhiaseddin">@DanialGhiaseddin</a></li>
             </ul>
           </div>
