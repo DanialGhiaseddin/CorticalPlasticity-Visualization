@@ -1,0 +1,83 @@
+
+Category,Abbreviation,Description
+Auditory,A1,Primary Auditory Cortex
+Auditory,A2,Second Auditory Cortex
+Auditory,AAF,Anterior Auditory Field
+Auditory,dPE,"Posterior Ectosylvian Auditory Cortex, dorsal division"
+Auditory,DZ,Dorsal Zone of Auditory Cortex
+Auditory,pPE,"Posterior Ectosylvian Gyrus, posterior division"
+Auditory,FAES,Field of the Anterior Ectosylvian Sulcus
+Auditory,IN,Auditory Insular Cortex
+Auditory,iPE,"Posterior Ectosylvian Auditory Cortex, intermediate division"
+Auditory,PAF,Posterior Auditory Field
+Auditory,TE,Temporal Cortex
+Auditory,VAF,Ventral Auditory Field
+Auditory,vPAF,"Posterior Auditory Field, ventral division"
+Auditory,vPE,"Posterior Ectosylvian Auditory Cortex, ventral division"
+Somatosensory,1,"Area 1, Primary Somatosensory Cortex"
+Somatosensory,2,"Area 2, Primary Somatosensory Cortex"
+Somatosensory,3a,"Area 3a, Primary Somatosensory Cortex"
+Somatosensory,3b,"Area 3b, Primary Somatosensory Cortex"
+Somatosensory,5al,"Area 5a, lateral division"
+Somatosensory,5am,"Area 5a, medial division"
+Somatosensory,5bl,"Area 5b, lateral division"
+Somatosensory,5bm,"Area 5b, medial division"
+Somatosensory,5m,"Area 5, medial division"
+Somatosensory,S2,Second Somatosensory Cortex
+Somatosensory,S2m,"Second Somatosensory Cortex, medial division"
+Somatosensory,S3,Third Somatosensory Cortex
+Somatosensory,S4,Fourth Somatosensory Cortex
+Somatosensory,S5,Fifth Somatosensory Cortex
+Visual,17,Area 17
+Visual,18,Area 18
+Visual,19,Area 19
+Visual,20a,Area 20a
+Visual,20b,Area 20b
+Visual,21a,Area 21a
+Visual,21b,Area 21b
+Visual,7a,"Area 7, anterior division"
+Visual,7m,"Area 7, medial division"
+Visual,7p,"Area 7, posterior division"
+Visual,AEV,Anterior Ectosylvian Visual Area
+Visual,ALLS,Anterolateral Lateral Suprasylvian Area
+Visual,AMLS,Anteromedial Lateral Suprasylvian Area
+Visual,CVA,Cingulate Visual Area
+Visual,DLS,Dorsolateral Suprasylvian Visual Area
+Visual,PLLS,Posterolateral Lateral Suprasylvian Area
+Visual,PMLS,Posteromedial Lateral Suprasylvian Area
+Visual,PS,Posterior Suprasylvian Visual Area
+Visual,SVA,Splenial Visual Area
+Visual,VLS,Ventrolateral Suprasylvian Area
+Motor,4δ,Area Praecentralis Macropyramidalis
+Motor,4fu,Area Praecentralis in fundo
+Motor,4γ,Area Praecentralis
+Motor,4sfu,Area Praecentralis supra fundo
+Frontal,6aα,Area Frontalis Agranularis Mediopyramidalis
+Frontal,6aβ,Area Frontalis Agranularis Macropyramidalis
+Frontal,6aγ,"Area 6, lateral division"
+Frontal,6iffu,"Area 6, infra fundum"
+Pre-frontal,PFdl,"Prefrontal Cortex, dorsolateral division"
+Pre-frontal,PFdm,"Prefrontal Cortex, dorsomedial division"
+Pre-frontal,PFv,"Prefrontal Cortex, ventral division"
+Insular,36,Perirhinal Cortex
+Insular,AId,"Agranular Insular Area, dorsal division"
+Insular,AIv,"Agranular Insular Area, ventral division"
+Insular,ALd,"Agranular Insular Area, dorsolateral division"
+Insular,ALv,"Agranular Insular Area, ventrolateral division"
+Insular,DI,Dysgranular Insular Area
+Insular,GI,Granular Insular Area
+Limbic,CgA,"Cingulate Area, anterior division"
+Limbic,CgP,"Cingulate Area, posterior division"
+Limbic,PL,Prelimbic Area
+Misc,G,Primary Gustatory Area
+Misc,MZ,Multisensory Zone
+Misc,Pp,Prepryiform Cortex
+Misc,RS,Retrosplenial Area
+Non-cortical,Hipp,Hippocampus
+Non-cortical,IC,Inferior Colliculi
+Non-cortical,SC,Superior Colliculi
+Non-cortical,LGN,Lateral Geniculate Nucleus
+Non-cortical,MGB,Medial Geniculate Nucleus
+Non-cortical,CN,Caudate Nucleus
+Non-cortical,PAG,Periaqueductal Gray
+Non-cortical,Cbm,Cerebellum

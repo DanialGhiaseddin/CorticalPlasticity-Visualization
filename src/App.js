@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from 'react-katex';
+import BrainRegionTable from "./BrainRegionTable";
+import './App.css';
 
 export default function App() {
   // Page title
@@ -15,6 +17,7 @@ export default function App() {
       "overview",
       // "interactive",
       "figures",
+      "sup_figures",
       "tables",
       "methods",
       // "downloads",
@@ -35,7 +38,8 @@ export default function App() {
     { id: "overview", label: "Overview" },
     // { id: "sup", label: "Interactive Charts" },
     // { id: "tables", label: "Tables" },
-    { id: "figures", label: "Supplementary Figures" },
+    { id: "figures", label: "Poster Figures" },
+    { id: "sup_figures", label: "Supplementary Figures" },
     { id: "tables", label: "Supplementary Tables" },
     { id: "methods", label: "Methods" },
     // { id: "downloads", label: "Downloads" },
@@ -149,7 +153,8 @@ This study investigated how perinatal deafness alters brain dynamics using netwo
             <aside className="card">
               <h2>Quick Links</h2>
               <ul>
-                <li><a href="#figures">Supplementary Figures</a></li>
+                <li><a href="#figures">Poster Figures</a></li>
+                <li><a href="#sup_figures">Supplementary Figures</a></li>
                 <li><a href="#tables">Supplementary Tables</a></li>
                 <li><a href="#methods">Extended Methods</a></li>
                 {/* <li><a href="#downloads">Data & Code</a></li> */}
@@ -187,45 +192,76 @@ This study investigated how perinatal deafness alters brain dynamics using netwo
 
         {/* Figures */}
         <section id="figures" className="section">
-          <h2>Figures</h2>
+          <h2>Poster Figures</h2>
 
           <div className="card">
-            <h3>Figure S1. </h3>
+            <h3>Figure 1. </h3>
             <img src="/CorticalPlasticity-Visualization/assets/1.png" alt="UTA" />
           </div>
 
           <div className="card">
-            <h3>Figure S2. </h3>
+            <h3>Figure 2. </h3>
             <img src="/CorticalPlasticity-Visualization/assets/2.png" alt="Figure S2" />
           </div>
 
           <div className="card">
-            <h3>Figure S3. </h3>
+            <h3>Figure 3. </h3>
             <img src="/CorticalPlasticity-Visualization/assets/3.png" alt="Figure S3" />
           </div>
 
           <div className="card">
-            <h3>Figure S4. </h3>
+            <h3>Figure 4. </h3>
             <img src="/CorticalPlasticity-Visualization/assets/4.png" alt="Figure S4" />
           </div>
 
           <div className="card">
-            <h3>Figure S5. </h3>
+            <h3>Figure 5. </h3>
             <img src="/CorticalPlasticity-Visualization/assets/5.png" alt="Figure S5" />
           </div>
 
           <div className="card">
-            <h3>Figure S6. </h3>
+            <h3>Figure 6. </h3>
             <img src="/CorticalPlasticity-Visualization/assets/6.png" alt="Figure S6" />
           </div>
         </section>
+
+
+        {/* Figures */}
+        <section id="sup_figures" className="section">
+          <h2>Supplementary Figures</h2>
+
+        <div className="card min-w-0 overflow-hidden">
+          <h3>Figure S1.</h3>
+          <img
+            src="/CorticalPlasticity-Visualization/assets/S1.png"
+            alt="UTA"
+            className="w-full max-w-full h-auto block mx-auto"
+          />
+        </div>
+
+          <div className="card">
+            <h3>Figure S2. </h3>
+            <img src="/CorticalPlasticity-Visualization/assets/S2.png" alt="Figure S2" />
+          </div>
+
+          <div className="card">
+            <h3>Figure S3. </h3>
+            <img src="/CorticalPlasticity-Visualization/assets/S3.png" alt="Figure S3" />
+          </div>
+
+          <div className="card">
+            <h3>Figure S4. </h3>
+            <img src="/CorticalPlasticity-Visualization/assets/S4.png" alt="Figure S4" />
+          </div>
+        </section>
+
 
         <div className="hr" />
 
                 {/* Tables */}
         <section id="tables" className="section">
           <h2>Tables</h2>
-          <div className="card">
+          {/* <div className="card">
             <h3>Subject-level Metrics</h3>
             <div className="table-placeholder">
               <p>Placeholder table (CSV → HTML table)</p>
@@ -234,7 +270,16 @@ This study investigated how perinatal deafness alters brain dynamics using netwo
             <p className="muted">
               Tip: Keep raw tables downloadable as CSV beside the rendered version for transparency.
             </p>
+          </div> */}
+          <div className="card table-card">
+          <h3>Brain Regions (Abbreviations & Descriptions)</h3>
+          <div className="table-scroll" role="region" aria-label="Brain regions table">
+            <BrainRegionTable />
           </div>
+          <p className="muted" style={{marginTop:12}}>
+            {/* Tip: Keep a downloadable CSV/JSON alongside the rendered table for transparency. */}
+          </p>
+        </div>
         </section>
 
         {/* Methods */}
@@ -429,18 +474,18 @@ This study investigated how perinatal deafness alters brain dynamics using netwo
           <h2>Downloads</h2>
           <div className="card">
             <ul>
-              <li><a href="/CorticalPlasticity-Visualization/assets/metrics_subject_level.csv" download>metrics_subject_level.csv</a></li>
-              <li><a href="/CorticalPlasticity-Visualization/assets/group_summary.json" download>group_summary.json</a></li>
-              <li><a href="/CorticalPlasticity-Visualization/assets/methods.pdf" download>methods.pdf</a></li>
+              <li><a href="/CorticalPlasticity-Visualization/assets/main_figures.pdf" download>Main Figures</a></li>
+              <li><a href="/CorticalPlasticity-Visualization/assets/supp_figures.pdf" download>Supplementary Figures</a></li>
+              <li><a href="/CorticalPlasticity-Visualization/assets/brain_regions.csv" download>Brain Regions</a></li>
             </ul>
-            <p className="muted">Place files under <code>public/assets/</code> in your project so they deploy with GitHub Pages.</p>
+            {/* <p className="muted">Place files under <code>public/assets/</code> in your project so they deploy with GitHub Pages.</p> */}
           </div>
         </section>
 
         <div className="hr" />
 
         {/* References */}
-        <section id="references" className="section">
+        {/* <section id="references" className="section">
           <h2>References</h2>
           <div className="card">
             <ol>
@@ -448,7 +493,7 @@ This study investigated how perinatal deafness alters brain dynamics using netwo
               <li>Betzel et al., Generative models of the human connectome. <em>NeuroImage</em> (2016).</li>
             </ol>
           </div>
-        </section>
+        </section> */}
 
         <div className="hr" />
 
