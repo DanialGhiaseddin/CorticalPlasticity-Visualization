@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import 'katex/dist/katex.min.css';
+import { BlockMath, InlineMath } from 'react-katex';
 
 export default function App() {
   // Page title
@@ -11,12 +13,12 @@ export default function App() {
   useEffect(() => {
     const expectedSections = [
       "overview",
-      "interactive",
-      "tables",
+      // "interactive",
       "figures",
+      "tables",
       "methods",
-      "downloads",
-      "references",
+      // "downloads",
+      // "references",
       "contact",
     ];
     console.assert(
@@ -31,12 +33,13 @@ export default function App() {
 
   const sections = [
     { id: "overview", label: "Overview" },
-    { id: "interactive", label: "Interactive Charts" },
-    { id: "tables", label: "Tables" },
-    { id: "figures", label: "Figures" },
+    // { id: "sup", label: "Interactive Charts" },
+    // { id: "tables", label: "Tables" },
+    { id: "figures", label: "Supplementary Figures" },
+    { id: "tables", label: "Supplementary Tables" },
     { id: "methods", label: "Methods" },
-    { id: "downloads", label: "Downloads" },
-    { id: "references", label: "References" },
+    // { id: "downloads", label: "Downloads" },
+    // { id: "references", label: "References" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -95,18 +98,26 @@ export default function App() {
       {/* Hero */}
       <header className="hero">
         <div className="container">
-          <h1 className="title">
-            Network Control Theory Reveals Altered Energy Efficiency in the Deaf Brain — Supplementary Material
-          </h1>
-          <p className="subtitle">
-            Interactive figures, tables, and extended methods to accompany the paper.
-          </p>
-          <div className="logos-row" aria-label="Affiliation logos">
+          
+                      <div
+            className="logos-row"
+            style={{ display: "flex", gap: "100px", justifyContent: "center", alignItems: "center" }}
+            >
             {/* Replace each placeholder with an <img src="/CorticalPlasticity-Visualization/assets/logoX.svg" alt="Institution" /> */}
             <img src="/CorticalPlasticity-Visualization/assets/UTA_logomark.png" alt="UTA" />
             <img src="/CorticalPlasticity-Visualization/assets/csl.png" alt="Cerebral System Lab" />
             <img src="/CorticalPlasticity-Visualization/assets/mcgill-university-logo-2.png" alt="McGill University" />
           </div>
+          
+          <h1 className="title">
+            Network Control Theory Reveals Altered Energy Efficiency in the Deaf Brain — Supplementary Material
+          </h1>
+          <p className="subtitle">
+            Additional figures, tables, and extended methods to accompany the paper.
+          </p>
+          {/* <div className="logos-row" aria-label="Affiliation logos"> */}
+
+
         </div>
       </header>
 
@@ -127,25 +138,23 @@ export default function App() {
             <article className="card">
               <h2>Overview</h2>
               <p>
-                This page hosts supplementary materials for the study. You can embed
-                interactive plots, downloadable CSV files, and rich figure panels. Use the
-                navigation above to jump to each section.
+This study investigated how perinatal deafness alters brain dynamics using network control theory (NCT) applied to structural connectomes of hearing and deaf cats. Although structural differences between groups were minimal (~0.21% unique connections), NCT simulations revealed that deaf animals required less control energy for state transitions from visual to frontal and prefrontal regions, suggesting more efficient access to higher-order cognitive areas. In contrast, visual-to-auditory transitions demanded more energy, indicating reduced efficiency in recruiting deprived auditory pathways. Regional analyses showed that auditory areas DZ and vPAF were key contributors to these efficiency gains, providing mechanistic support for the idea that cross-modal plasticity in specific auditory cortices underlies visual compensation in deafness.
               </p>
-              <ul>
+              {/* <ul>
                 <li><strong>Goal:</strong> Compare network control energy metrics between groups.</li>
                 <li><strong>Dataset:</strong> Diffusion MRI–based structural connectomes (cat cohort).</li>
                 <li><strong>Key Metrics:</strong> Average controllability, minimum energy, efficiency.</li>
-              </ul>
+              </ul> */}
             </article>
             <aside className="card">
               <h2>Quick Links</h2>
               <ul>
-                <li><a href="#interactive">Interactive Charts</a></li>
-                <li><a href="#tables">Tables</a></li>
+                <li><a href="#figures">Supplementary Figures</a></li>
+                <li><a href="#tables">Supplementary Tables</a></li>
                 <li><a href="#methods">Extended Methods</a></li>
-                <li><a href="#downloads">Data & Code</a></li>
+                {/* <li><a href="#downloads">Data & Code</a></li> */}
               </ul>
-              <p className="muted">Tip: Keep filenames stable so external links (QR codes, posters) never break.</p>
+              {/* <p className="muted">Tip: Keep filenames stable so external links (QR codes, posters) never break.</p> */}
             </aside>
           </div>
         </section>
@@ -153,7 +162,7 @@ export default function App() {
         <div className="hr" />
 
         {/* Interactive Charts */}
-        <section id="interactive" className="section">
+        {/* <section id="interactive" className="section">
           <h2>Interactive Charts</h2>
           <p className="muted">Swap these placeholders with Plotly or Recharts components later.</p>
           <div className="grid">
@@ -172,24 +181,7 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
-
-        <div className="hr" />
-
-        {/* Tables */}
-        <section id="tables" className="section">
-          <h2>Tables</h2>
-          <div className="card">
-            <h3>Subject-level Metrics</h3>
-            <div className="table-placeholder">
-              <p>Placeholder table (CSV → HTML table)</p>
-              <small>Render a CSV via a lightweight parser or use a minimal component.</small>
-            </div>
-            <p className="muted">
-              Tip: Keep raw tables downloadable as CSV beside the rendered version for transparency.
-            </p>
-          </div>
-        </section>
+        </section> */}
 
         <div className="hr" />
 
@@ -230,8 +222,23 @@ export default function App() {
 
         <div className="hr" />
 
+                {/* Tables */}
+        <section id="tables" className="section">
+          <h2>Tables</h2>
+          <div className="card">
+            <h3>Subject-level Metrics</h3>
+            <div className="table-placeholder">
+              <p>Placeholder table (CSV → HTML table)</p>
+              <small>Render a CSV via a lightweight parser or use a minimal component.</small>
+            </div>
+            <p className="muted">
+              Tip: Keep raw tables downloadable as CSV beside the rendered version for transparency.
+            </p>
+          </div>
+        </section>
+
         {/* Methods */}
-<section id="methods" className="section">
+{/* <section id="methods" className="section">
   <h2>Extended Methods</h2>
 
   <div className="card">
@@ -308,7 +315,112 @@ export default function App() {
       </li>
     </ul>
   </div>
+</section> */}
+
+
+<section id="methods" className="section">
+  <h2 className="text-2xl font-bold mb-6">Extended Methods</h2>
+
+  {/* Study Design */}
+  <div className="card mb-6">
+    <p>
+      We studied 12 domestic cats (6 hearing, 6 perinatally deafened). Imaging was
+      performed on a 7 Tesla MRI scanner and included diffusion-weighted imaging (DWI)
+      for white matter tract reconstruction and T1-weighted MP2RAGE scans for anatomical
+      reference.
+    </p>
+  </div>
+
+  {/* Step 1 */}
+  <div className="card bg-orange-200/60 mb-6 p-4 rounded-lg shadow">
+    <h3 className="text-xl font-semibold mb-3">Step 1: Connectome Extraction</h3>
+    <ul className="list-disc pl-6 space-y-2">
+      <li>
+        <strong>Preprocessing:</strong> Brain extraction, distortion correction, and 
+        alignment to the Catlas feline gray matter atlas (Stolzberg et al., 2017) were 
+        performed using FSL (v6.0.1). This included automated brain extraction (BET), 
+        distortion correction (TOPUP, EDDY), and manual QC masking. Templates were aligned 
+        to subject diffusion space using ANTs (Sacco et al., 2024).
+      </li>
+      <li>
+        <strong>Connectome extraction:</strong> Probabilistic tractography (probtrackx2, FSL) 
+        was performed between 160 predefined Catlas ROIs. Bidirectional streamline counts were 
+        summed to form a symmetric 160 × 160 connectivity matrix.
+      </li>
+    </ul>
+  </div>
+
+  {/* Step 2 */}
+  <div className="card bg-orange-300/60 mb-6 p-4 rounded-lg shadow">
+    <h3 className="text-xl font-semibold mb-3">Step 2: Modeling the Brain as a Dynamical System</h3>
+    <p className="mb-3">
+      Brain dynamics were represented using a linear time-invariant (LTI) system:
+    </p>
+    {/* <p className="text-center font-mono text-lg mb-3">
+      𝑑𝑥(t)/𝑑t = A · x(t) + B · u(t)
+    </p> */}
+    <BlockMath math="\frac{dx(t)}{dt} = A \cdot x(t) + B \cdot u(t)" />
+    <ul className="list-disc pl-6 space-y-1">
+      <li>
+        <strong><InlineMath math="x(t)" />:</strong> state vector of neural activity across N regions
+      </li>
+      <li>
+        <strong><InlineMath math="A" />:</strong> structural connectivity matrix (from DWI)
+      </li>
+      <li>
+        <strong><InlineMath math="B" />:</strong> control input matrix (defines controllable regions)
+      </li>
+      <li>
+        <strong><InlineMath math="u(t)" />:</strong> external control input vector
+      </li>
+    </ul>
+  </div>
+
+  {/* Step 3 */}
+  {/* <div className="card bg-orange-400/60 mb-6 p-4 rounded-lg shadow">
+    <h3 className="text-xl font-semibold mb-3">Step 3: Minimum Control Energy</h3>
+    <p className="mb-2">
+      The controllability Gramian was defined as:
+    </p>
+    <p className="text-center font-mono text-lg mb-3">
+      W = ∫₀ᵀ e<sup>At</sup> B B<sup>ᵀ</sup> e<sup>Aᵀt</sup> dt
+    </p>
+    <p className="mb-2">
+      The minimum control energy required for a state transition was:
+    </p>
+    <p className="text-center font-mono text-lg">
+      E = (x<sub>T</sub> − x<sub>0</sub>)<sup>ᵀ</sup> W<sup>−1</sup> (x<sub>T</sub> − x<sub>0</sub>)
+    </p>
+  </div> */}
+  <div className="card bg-orange-400/60 mb-6 p-4 rounded-lg shadow">
+  <h3 className="text-xl font-semibold mb-3">Step 3: Minimum Control Energy</h3>
+
+  <p className="mb-2">The controllability Gramian was defined as:</p>
+  <BlockMath math="W = \int_{0}^{T} e^{At} B B^{\top} e^{A^{\top} t} \, dt" />
+
+  <p className="mb-2">The minimum control energy required for a state transition was:</p>
+  <BlockMath math="E = (x_{T} - x_{0})^{\top} W^{-1} (x_{T} - x_{0})" />
+  </div>
+
+  {/* Step 4 */}
+  <div className="card bg-orange-500/60 p-4 rounded-lg shadow">
+    <h3 className="text-xl font-semibold mb-3">Step 4: Statistical Analysis</h3>
+    <ul className="list-disc pl-6 space-y-2">
+      <li>
+        Energy values were compared between hearing and deaf groups using independent 
+        two-sample <InlineMath math="t" />-tests.
+      </li>
+      <li>
+        Significance threshold was set at <InlineMath math="p < 0.05" />.
+      </li>
+      <li>
+        Percentage change in mean energy between groups was computed to quantify relative differences.
+      </li>
+    </ul>
+  </div>
 </section>
+
+
 
         <div className="hr" />
 

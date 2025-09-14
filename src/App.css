@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+.logos-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; /* space between logos */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
