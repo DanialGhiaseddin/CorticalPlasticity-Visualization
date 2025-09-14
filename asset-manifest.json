@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CorticalPlasticity-Visualization/static/css/main.d9aa6e5d.css",
-    "main.js": "/CorticalPlasticity-Visualization/static/js/main.c63e4d6a.js",
+    "main.css": "/CorticalPlasticity-Visualization/static/css/main.97c92504.css",
+    "main.js": "/CorticalPlasticity-Visualization/static/js/main.22ecf264.js",
     "static/js/453.0e2a7f7a.chunk.js": "/CorticalPlasticity-Visualization/static/js/453.0e2a7f7a.chunk.js",
     "static/media/KaTeX_AMS-Regular.ttf": "/CorticalPlasticity-Visualization/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/CorticalPlasticity-Visualization/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
@@ -64,12 +64,12 @@
     "static/media/KaTeX_Size3-Regular.woff": "/CorticalPlasticity-Visualization/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/CorticalPlasticity-Visualization/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/CorticalPlasticity-Visualization/index.html",
-    "main.d9aa6e5d.css.map": "/CorticalPlasticity-Visualization/static/css/main.d9aa6e5d.css.map",
-    "main.c63e4d6a.js.map": "/CorticalPlasticity-Visualization/static/js/main.c63e4d6a.js.map",
+    "main.97c92504.css.map": "/CorticalPlasticity-Visualization/static/css/main.97c92504.css.map",
+    "main.22ecf264.js.map": "/CorticalPlasticity-Visualization/static/js/main.22ecf264.js.map",
     "453.0e2a7f7a.chunk.js.map": "/CorticalPlasticity-Visualization/static/js/453.0e2a7f7a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9aa6e5d.css",
-    "static/js/main.c63e4d6a.js"
+    "static/css/main.97c92504.css",
+    "static/js/main.22ecf264.js"
   ]
 }
